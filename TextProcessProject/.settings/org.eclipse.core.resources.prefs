@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//Data/Configure.xml=GBK
+encoding//src/HtmlCrawler/HtmlContent.java=GBK
+encoding//src/HtmlCrawler/HtmlParser.java=GBK
+encoding//src/HtmlCrawler/LJHtmLibrary.java=GBK
+encoding//src/TextProcess/KeyWordSummary.java=UTF-8
+encoding//src/TextProcess/NewWordDiff.java=GBK
+encoding//src/TextProcess/WordFreStatistics.java=GBK
+encoding//src/divideWords/NlpirLibrary.java=UTF-8
+encoding//src/divideWords/NlpirMethod.java=UTF-8
+encoding//src/divideWords/NlpirTest.java=UTF-8
+encoding//src/fileutil/FileOperateUtils.java=UTF-8
+encoding//src/summary/SummaryLibrary.java=UTF-8
+encoding//src/summary/SummaryMethod.java=UTF-8
+encoding//src/summary/SummaryTest.java=UTF-8
+encoding/<project>=UTF-8

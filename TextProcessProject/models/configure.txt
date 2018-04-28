@@ -1,0 +1,45 @@
+-est -alpha 0.5 -beta 0.1 -ntopics 10 -niters 500 -savestep 100 -twords 20 -dir models/casestudy-en/ -dfile one.txt
+
+其中，
+-est: Estimate the LDA model from scratch
+
+•-alpha <double>: alpha是LDA的超参数，它的默认值是50/K（K是主题的数量）。
+
+•-beta <double>: beta是LDA模型的超参数，它的默认值是0.1。
+
+•-ntopics <int>: 主题数量，默认值为100，它与输入的数据集有关，可以自行设定。
+
+•-niters <int>: 吉布斯采样的迭代次数，默认值为2000，可以自行设定。
+
+•-savestep <int>: 每次LDA建模结果的吉布斯抽样间隔数，默认值为200，可自行设定。如设为100，则每隔100次吉布斯抽样存储一次LDA建模结果。
+
+•-twords <int>: 与每个话题最相关的词的数量，默认值为0。可以自行设定，如果设为20，则JGibbLDA将把与话题最相关的20个词显示在话题下面。
+
+•-dir <string>: 输入数据集的存储目录。
+
+•-dfile <string>:输入数据集的名称。
+6.	jGibbLDA的数据输入格式
+作为训练和估计模型的数据以及新数据的数据输入格式是相同的，输入格式如下所示：
+[M]
+[document1]
+[document2]
+…
+[documentM]
+其中，第一行的M表示要处理文档的数量，之后每行的[documenti]是数据集中的第i个文档中的所有词的列表，格式如下所示：
+[documenti] = [wordi1] [wordi2] [wordi3] … [wordiNi]
+其中，[wordij](i=1..M, j=1..Ni)为字符串，并且通过空格来分隔开。
+7.	jGibbLDA的数据输出格式
+JGibbLDA的输出包括以下几个文件：
+<model_name>.others
+<model_name>.phi
+<model_name>.theta
+<model_name>.tassign
+<model_name>.twords
+其中：
+<model_name>表示对应于存储到硬盘上的时间步长值的LDA模型的名称。例如，第400次吉布斯采样迭代生成的模型名称为model-00400。最后一次吉布斯采样迭代生成的模型名称为model-final.
+<model_name>.others包含了一些LDA模型的参数，比如alpha(LDA模型的一个超参数)、beta(LDA模型的一个超参数)、ntopics(主题数量)、ndocs(文档数量)、nwords(词汇数量)、liter(以保存模型的吉布斯采样迭代)。
+<model_name>.phi包含了词-主题分布，也就是p(wordw|topict)。每一行表示一个主题，每一列的词是可能与该行主题有关的词表中的词。
+<model_name>.theta包含了主题-文档分布，也就是p(topict|documentm)。每一行表示一个文档，每一列表示一个主题。
+<model_name>.tassign包含了训练数据中每个词的主题分布。每一行是包含了<wordij>:<topic of wordij>列表的文档。
+<model_name>.twords包含了与每个话题最相关的词。
+JGibbLDA同时还会生成一个wordmap.txt文件，它包括每个词和它的数量的一种映射关系。

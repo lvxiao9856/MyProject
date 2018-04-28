@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jieba-analysis-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/args4j-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-lib-2.3-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-base-extra.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-18.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-collections-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jna-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ezmorph-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/microduo-commons-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-collections.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
